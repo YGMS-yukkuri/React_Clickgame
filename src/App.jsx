@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Mainbutton from './component/Mainbutton/Mainbutton'
+import Mainbutton from './components/Mainbutton/Mainbutton'
+import Infomation from './components/Infomation/Infomation'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <Mainbutton count={count} setCount={setCount} />
+      <Infomation count={count} />
     </>
   )
 }
