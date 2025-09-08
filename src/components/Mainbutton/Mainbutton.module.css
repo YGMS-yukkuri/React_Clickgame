@@ -1,0 +1,21 @@
+.mainButton{
+    margin-top: 5%;
+    border: none;
+    background-color: rgba(59, 202, 202, 0.952);
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+    transition: all 0.2s ease-in-out;
+    font-size: 20px;
+    cursor: pointer;
+}
+.mainButton:hover{
+    background-color: #64e8e8f3;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+.mainButton:active{
+    background-color: rgba(100, 232, 232, 0.952);
+    transform: scale(0.9);
+    transition: all 0.2s ease-in-out;
+}
