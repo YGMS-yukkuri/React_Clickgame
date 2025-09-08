@@ -1,12 +1,13 @@
 .infomation {
-    background-color: rgba(240, 248, 255, 0.489);
-    margin: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3%;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: rgba(240, 248, 255, 0.489);
     border: 10px ridge rgb(255, 187, 61);
     border-radius: 10px;
-    width: 30%;
+    width: 80%;
+    height: 70%;
 }
