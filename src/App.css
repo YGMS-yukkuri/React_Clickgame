@@ -1,1 +1,8 @@
-
+main {
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 400px 1fr 1fr ;
+    grid-template-rows: 150px 150px 150px 150px 150px 1fr;
+    justify-items: center;
+    align-items: center;
+}

@@ -8,8 +8,10 @@ function App() {
 
   return (
     <>
-      <Mainbutton count={count} setCount={setCount} />
-      <Infomation count={count} />
+      <main>
+        <Mainbutton count={count} setCount={setCount} />
+        <Infomation count={count} />
+      </main>
     </>
   )
 }
