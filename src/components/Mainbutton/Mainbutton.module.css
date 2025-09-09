@@ -1,4 +1,6 @@
 .mainButton{
+    grid-column: 1/2;
+    grid-row: 1/3;
     margin: auto;
     border: none;
     background-color: rgba(59, 202, 202, 0.952);
