@@ -10,11 +10,9 @@ function App() {
 
   return (
     <main>
-      <>
-        <Mainbutton count={count} setCount={setCount} />
-        <Infomation count={count} />
-        <DisplayUPG count={count} setCount={setCount} UpgradeIndex={Upgrade} />
-      </>
+      <Mainbutton count={count} setCount={setCount} />
+      <Infomation count={count} />
+      <DisplayUPG count={count} setCount={setCount} UpgradeIndex={Upgrade} />
     </main>
   )
 }
