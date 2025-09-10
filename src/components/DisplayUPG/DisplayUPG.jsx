@@ -1,0 +1,20 @@
+import React, { useEffect } from 'react'
+import Upgrade from '../Upgrade/Upgrade'
+
+export default function DisplayUPG({ count, setCount, UpgradeIndex }) {
+    useEffect(() => {
+        UpgradeIndex.forEach(upg => {
+            if (count >= upg.DisplayCount) {
+                upg.displayed = true;
+            }
+        });
+    }, [count, UpgradeIndex]);
+
+    return (
+        <>
+            {UpgradeIndex.filter(upg => count >= upg.DisplayCount || upg.displayed).map((upgrade) => (
+                <Upgrade upgrade={upgrade} count={count} setCount={setCount} key={upgrade.id} />
+            ))}
+        </>
+    );
+}

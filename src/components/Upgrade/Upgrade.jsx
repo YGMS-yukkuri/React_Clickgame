@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Upgrade.module.css'
+import UpgButton from '../UpgButton/UpgButton'
 
-export default function Upgrade() {
+export default function Upgrade( { upgrade, count, setCount } ) {
     return (
-        <div className={styles.upgrademenu}>
+        <div className={styles.upgrademenu} style={{ gridRow: upgrade.id}} key={upgrade.id}>
             <div className={styles.upgradebutton}>
-                <button>アップグレード</button>
+                <UpgButton upgrade={upgrade} count={count} setCount={setCount} />
             </div>
             <div className={styles.description}>
-                <p>アップグレードの説明</p>
+                <p>{upgrade.description}</p>
             </div>
             <div className={styles.cost}>
-                <p>コスト: 1ポイント</p>
+                <p>コスト: {upgrade.cost}ポイント</p>
             </div>
         </div>
     )
