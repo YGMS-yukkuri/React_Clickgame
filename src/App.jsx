@@ -3,16 +3,17 @@ import './App.css'
 import Mainbutton from './components/Mainbutton/Mainbutton'
 import Infomation from './components/Infomation/Infomation'
 import DisplayUPG from './components/DisplayUPG/DisplayUPG';
-import Upgrade from './UpgradeIndex';
+import UpgradeIndex from './UpgradeIndex';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [upgrade, setUpgrade] = useState(UpgradeIndex);
 
   return (
     <main>
-      <Mainbutton count={count} setCount={setCount} />
+      <Mainbutton count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
       <Infomation count={count} />
-      <DisplayUPG count={count} setCount={setCount} UpgradeIndex={Upgrade} />
+      <DisplayUPG count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
     </main>
   )
 }
