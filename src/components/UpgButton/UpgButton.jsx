@@ -5,7 +5,6 @@ export default function UpgButton({ count, setCount, upgrade, setUpgrade }) {
         console.log(`Clicked on ${upgrade.name}`);
         if (upgrade.cost <= count) {
             setCount(count - upgrade.cost);
-            alert(`${upgrade.name} purchased!`);
             setUpgrade(prevUpgrade => {
                 return prevUpgrade.map(upg => {
                     if (upg.id === upgrade.id) {
@@ -14,10 +13,9 @@ export default function UpgButton({ count, setCount, upgrade, setUpgrade }) {
                     return upg;
                 });
             });
-
         }
     }
     return (
-        <button className="upgbutton" onClick={handleClick}>{upgrade.name}({upgrade.amount})</button>
+        <button className="upgbutton" onClick={handleClick}>{upgrade.name}<br />({upgrade.amount})</button>
     )
 }

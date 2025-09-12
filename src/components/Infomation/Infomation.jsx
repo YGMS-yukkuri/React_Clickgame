@@ -4,7 +4,7 @@ export default function Infomation({ count }) {
   return (
     <>
         <div className={styles.infomation}>
-            <p>Now: {count}</p>
+            <p>Count: {count}</p>
         </div>
     </>
   )

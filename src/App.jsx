@@ -5,6 +5,7 @@ import Infomation from './components/Infomation/Infomation'
 import DisplayUPG from './components/DisplayUPG/DisplayUPG';
 import UpgradeIndex from './UpgradeIndex';
 
+
 function App() {
   const [count, setCount] = useState(0);
   const [upgrade, setUpgrade] = useState(UpgradeIndex);
@@ -12,7 +13,7 @@ function App() {
   return (
     <main>
       <Mainbutton count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
-      <Infomation count={count} />
+      <Infomation count={count} setCount={setCount} UpgradeIndex={upgrade} />
       <DisplayUPG count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
     </main>
   )

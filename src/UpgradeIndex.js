@@ -1,8 +1,8 @@
 let UpgradeIndex = [
     {
         id: 1, 
-        name: "Upgrade 1",
-        description: "Upgrade 1",
+        name: "クリックアップグレード",
+        description: "1クリックごとに得られるカウントを増やします",
         cost: 5,
         amount: 0,
         cps: 0,
