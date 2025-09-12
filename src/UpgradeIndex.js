@@ -12,8 +12,8 @@ let UpgradeIndex = [
     },
     {
         id: 2,
-        name: "Upgrade 2",
-        description: "Upgrade 2",
+        name: "自動化1",
+        description: "自動化するアップグレードです(1秒ごとに1ポイント獲得)",
         cost: 5,
         amount: 0,
         cps: 1,
@@ -23,8 +23,8 @@ let UpgradeIndex = [
     },
     {
         id: 3,
-        name: "Upgrade 3",
-        description: "Upgrade 3",
+        name: "自動化2",
+        description: "自動化するアップグレードです(1秒ごとに5ポイント獲得)",
         cost: 5,
         amount: 0,
         cps: 5,

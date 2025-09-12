@@ -11,3 +11,9 @@
     width: 80%;
     height: 70%;
 }
+
+.infomation a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
