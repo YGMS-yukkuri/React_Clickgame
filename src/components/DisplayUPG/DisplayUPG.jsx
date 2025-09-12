@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Upgrade from '../Upgrade/Upgrade'
 
-export default function DisplayUPG({ count, setCount, UpgradeIndex }) {
+export default function DisplayUPG({ count, setCount, UpgradeIndex, setUpgrade }) {
     useEffect(() => {
         UpgradeIndex.forEach(upg => {
             if (count >= upg.DisplayCount) {
@@ -13,7 +13,13 @@ export default function DisplayUPG({ count, setCount, UpgradeIndex }) {
     return (
         <>
             {UpgradeIndex.filter(upg => count >= upg.DisplayCount || upg.displayed).map((upgrade) => (
-                <Upgrade upgrade={upgrade} count={count} setCount={setCount} key={upgrade.id} />
+                <Upgrade
+                    upgrade={upgrade}
+                    setUpgrade={setUpgrade}
+                    count={count}
+                    setCount={setCount}
+                    key={upgrade.id}
+                />
             ))}
         </>
     );

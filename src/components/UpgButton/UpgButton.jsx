@@ -1,14 +1,23 @@
 import React from 'react'
 
-export default function UpgButton({ count, setCount, upgrade }) {
+export default function UpgButton({ count, setCount, upgrade, setUpgrade }) {
     const handleClick = () => {
         console.log(`Clicked on ${upgrade.name}`);
         if (upgrade.cost <= count) {
             setCount(count - upgrade.cost);
             alert(`${upgrade.name} purchased!`);
+            setUpgrade(prevUpgrade => {
+                return prevUpgrade.map(upg => {
+                    if (upg.id === upgrade.id) {
+                        return { ...upg, amount: upg.amount + 1 };
+                    }
+                    return upg;
+                });
+            });
+
         }
     }
     return (
-        <button className="upgbutton" onClick={handleClick}>{upgrade.name}</button>
+        <button className="upgbutton" onClick={handleClick}>{upgrade.name}({upgrade.amount})</button>
     )
 }
