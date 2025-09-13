@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import Mainbutton from './components/Mainbutton/Mainbutton'
 import Infomation from './components/Infomation/Infomation'
-import DisplayUPG from './components/DisplayUPG/DisplayUPG';
 import UpgradeIndex from './UpgradeIndex';
+import DisplayUpg from './components/DisplayUpg/DisplayUpg';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <main>
       <Mainbutton count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
       <Infomation count={count} setCount={setCount} UpgradeIndex={upgrade} />
-      <DisplayUPG count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
+      <DisplayUpg count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
     </main>
   )
 }

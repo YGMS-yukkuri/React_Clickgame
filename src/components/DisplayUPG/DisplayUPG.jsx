@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Upgrade from '../Upgrade/Upgrade'
 
-export default function DisplayUPG({ count, setCount, UpgradeIndex, setUpgrade }) {
+export default function DisplayUpg({ count, setCount, UpgradeIndex, setUpgrade }) {
     useEffect(() => {
         UpgradeIndex.forEach(upg => {
             if (count >= upg.DisplayCount) {
