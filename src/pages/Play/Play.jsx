@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import './Play.css'
 import { Link } from 'react-router-dom'
-import Mainbutton from '../../components/Main/Mainbutton/Mainbutton'
-import Infomation from '../../components/Main/Infomation/Infomation'
+import Mainbutton from '../../components/Play/Main/Mainbutton/Mainbutton'
+import Infomation from '../../components/Play/Main/Infomation/Infomation'
 import UpgradeIndex from '../../UpgradeIndex';
-import DisplayUpg from '../../components/UpgradeBox/DisplayUpg/DisplayUPG';
+import DisplayUpg from '../../components/Play/UpgradeBox/DisplayUpg/DisplayUpg';
 
 
 function Play() {
