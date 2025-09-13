@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import Mainbutton from './components/Mainbutton/Mainbutton'
-import Infomation from './components/Infomation/Infomation'
+import Mainbutton from './components/Main/Mainbutton/Mainbutton'
+import Infomation from './components/Main/Infomation/Infomation'
 import UpgradeIndex from './UpgradeIndex';
-import DisplayUpg from './components/DisplayUpg/DisplayUpg';
+import DisplayUpg from './components/UpgradeBox/DisplayUpg/DisplayUPG';
 
 
 function App() {
