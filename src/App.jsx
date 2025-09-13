@@ -1,30 +1,23 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-import Mainbutton from './components/Main/Mainbutton/Mainbutton'
-import Infomation from './components/Main/Infomation/Infomation'
-import UpgradeIndex from './UpgradeIndex';
-import DisplayUpg from './components/UpgradeBox/DisplayUpg/DisplayUPG';
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import ROUTES from './Routes';
+import Start from './pages/Start/Start';
+import Play from './pages/Play/Play';
+import Result from './pages/Result/Result';
 
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [upgrade, setUpgrade] = useState(UpgradeIndex);
-  const [second, setSecond] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSecond(prevSecond => prevSecond + 1);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <main>
-      <Mainbutton count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
-      <Infomation count={count} setCount={setCount} UpgradeIndex={upgrade} second={second} />
-      <DisplayUpg count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
-    </main>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path={ROUTES.START} element={<Start />} />
+          <Route path={ROUTES.PLAY} element={<Play />} />
+          <Route path={ROUTES.RESULT} element={<Result />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
-export default App
+export default App;

@@ -1,4 +1,4 @@
-import { use, useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from './Infomation.module.css'
 
 export default function Infomation({ count, setCount, UpgradeIndex, second }) {
