@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react'
 import './Play.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Mainbutton from '../../components/Play/Main/Mainbutton/Mainbutton'
 import Infomation from '../../components/Play/Main/Infomation/Infomation'
 import UpgradeIndex from '../../UpgradeIndex';
 import DisplayUpg from '../../components/Play/UpgradeBox/DisplayUpg/DisplayUpg';
+import Judgegoal from '../../components/Play/Main/Judgegoal/Judgegoal'
 
 
 function Play() {
+    const location = useLocation();
+    const goal = location.state.goal;
+
     const [count, setCount] = useState(0);
     const [upgrade, setUpgrade] = useState(UpgradeIndex);
     const [second, setSecond] = useState(0);
@@ -22,6 +26,7 @@ function Play() {
     return (
         <>
             <main>
+                <Judgegoal goal={goal} count={count} />
                 <Mainbutton count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
                 <Infomation count={count} setCount={setCount} UpgradeIndex={upgrade} second={second} />
                 <DisplayUpg count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />

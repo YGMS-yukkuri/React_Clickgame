@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Start.css'
+import { Link } from 'react-router-dom'
 
 export default function Start() {
+
+  const [goal, setGoal] = useState(0);
+  
+  useEffect(() => {
+    setGoal(1000);
+  }, []);
+
   return (
     <>
       <main>
@@ -12,7 +20,7 @@ export default function Start() {
             <p>ポイントを使ってアップグレードを購入し、より多くのポイントを獲得しましょう！</p>
             <p>ゴールスコアを設定し、達成するとクリア！</p>
 
-            <select>
+            <select value={goal} onChange={(e) => setGoal(e.target.value)}>
               <option value="1000">ゴールスコア: 1000</option>
               <option value="5000">ゴールスコア: 5000</option>
               <option value="10000">ゴールスコア: 10000</option>
@@ -29,7 +37,9 @@ export default function Start() {
             </select>
 
             <div className="start-button">
-              <button>ゲームスタート</button>
+              <Link to="/play" state={{ goal: goal }}>
+                <button>ゲームスタート</button>
+              </Link>
             </div>
           </div>
         </div>
