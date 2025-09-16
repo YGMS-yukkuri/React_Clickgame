@@ -13,5 +13,20 @@
     background-color: #ccc;
     border-radius: 5px;
     overflow: hidden;
-    margin: 1% 5% 1% 5%
+    margin: 1% 5% 1% 5%;
+    transform: rotate(180deg);
+}
+
+.goalbarFill {
+    height: 50%;
+    background-color: #4caf50;
+    width: 100%;
+    transition: height 0.2s ease-in-out;
+}
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 20px;
 }
