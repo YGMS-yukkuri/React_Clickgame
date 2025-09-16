@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react'
+import styles from './Judgegoal.module.css'
 
 export default function Judgegoal({ goal, count }) {
 
     useEffect(() => {
         console.log(`Goal: ${goal}, Current Score: ${count}`);
-        document.querySelector('.goalbar-fill').style.width = `${(count / goal) * 100}%`;
     }, [goal, count]);
 
   return (
-    <div>Judgegoal: {goal} | Current Score: {count}
-        <div className="goalbar">
-            <div className="goalbar-fill" style={{ width: `${(count / goal) * 100}%` }}></div>
+    <div className={styles.Goal}>
+        <div className={styles.goalbar}>
+            <div className={styles.goalbarFill} style={{ width: `${(count / goal) * 100}%` }}></div>
         </div>
+      <p>Judgegoal: {goal} Current Score: {count}</p>
     </div>
   )
 }
