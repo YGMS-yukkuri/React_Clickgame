@@ -13,6 +13,7 @@ function Play() {
     const goal = location.state.goal;
 
     const [count, setCount] = useState(0);
+    const [fillCount, setFillCount] = useState(0);
     const [upgrade, setUpgrade] = useState(UpgradeIndex);
     const [second, setSecond] = useState(0);
 
@@ -26,10 +27,10 @@ function Play() {
     return (
         <>
             <main>
-                <Judgegoal goal={goal} count={count} />
-                <Mainbutton count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
-                <Infomation count={count} setCount={setCount} UpgradeIndex={upgrade} second={second} />
-                <DisplayUpg count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} />
+                <Judgegoal goal={goal} count={count} fillCount={fillCount} setFillCount={setFillCount} />
+                <Mainbutton count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} fillCount={fillCount} setFillCount={setFillCount} />
+                <Infomation count={count} setCount={setCount} UpgradeIndex={upgrade} second={second} fillCount={fillCount} setFillCount={setFillCount} />
+                <DisplayUpg count={count} setCount={setCount} UpgradeIndex={upgrade} setUpgrade={setUpgrade} fillCount={fillCount} setFillCount={setFillCount} />
             </main>
         </>
     )

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import styles from './Infomation.module.css'
 
-export default function Infomation({ count, setCount, UpgradeIndex, second }) {
+export default function Infomation({ count, setCount, UpgradeIndex, second, fillCount, setFillCount }) {
   let autocounter = 0;
   UpgradeIndex.forEach(upg => {
     autocounter += upg.cps * upg.amount;
@@ -9,6 +9,7 @@ export default function Infomation({ count, setCount, UpgradeIndex, second }) {
 
   useEffect(() => {
     setCount(count + autocounter);
+    setFillCount(fillCount + autocounter);
   }, [second]);
 
   return (
