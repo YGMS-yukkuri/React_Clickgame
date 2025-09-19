@@ -5,7 +5,8 @@
     transform: translate(-50%, -50%);
     font-family: 'Arial', sans-serif;
     border-radius: 10px;
-    box-shadow: 6px 6px 8px rgba(255, 255, 255, 0.401);
+    background-color: rgb(28, 31, 31);
+    box-shadow: 6px 6px 8px rgba(255, 255, 255, 0.623);
 }
 
 .start-box {

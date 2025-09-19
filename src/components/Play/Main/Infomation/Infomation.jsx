@@ -15,8 +15,8 @@ export default function Infomation({ count, setCount, UpgradeIndex, second, fill
   return (
     <>
       <div className={styles.infomation}>
-        <a>Count: {count}</a>
-        <a>auto: {autocounter}</a>
+        <a>Point: {count}</a>
+        <a>auto: {autocounter}/s</a>
       </div>
     </>
   )
