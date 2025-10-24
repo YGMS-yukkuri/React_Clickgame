@@ -10,6 +10,7 @@ export default function DisplayUpg({ count, setCount, UpgradeIndex, setUpgrade }
         });
     }, [count, UpgradeIndex]);
 
+    
     return (
         <>
             {UpgradeIndex.filter(upg => count >= upg.DisplayCount || upg.displayed).map((upgrade) => (

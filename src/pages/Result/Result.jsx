@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import UpgradeIndex from '../../UpgradeIndex';
 import { Link, useLocation } from 'react-router-dom'
 import styles from './Result.module.css'
 
 export default function Result() {
   const location = useLocation();
   const { goal, count, fillCount } = location.state || { goal: 0, count: 0, fillCount: 0 };
+  useEffect(() => {
+          UpgradeIndex.forEach(upg => {
+              upg.displayed = false;
+          });
+      }, []);
   return (
     <div className={styles.container}>
       <div className={styles.content}>
