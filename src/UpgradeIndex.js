@@ -27,7 +27,7 @@ let UpgradeIndex = [
         id: 3,
         name: "自動化2",
         description: "自動化するアップグレードです(1秒ごとに5ポイント獲得)",
-        cost: 10,
+        cost: 25,
         costupper: 1.2,
         amount: 0,
         cps: 5,
@@ -38,13 +38,13 @@ let UpgradeIndex = [
     {
         id: 4,
         name: "猫の手",
-        description: "猫の手が今回特別に！！借りられます(1回あたりのクリック数が増加します)",
-        cost: 100,
+        description: "猫の手が今回特別に！！借りられます(すべてのステータスが上昇します)",
+        cost: 150,
         costupper: 1.15,
         amount: 0,
         cps: 10,
         clickup: 15,
-        DisplayCount: 1000,
+        DisplayCount: 500,
         displayed: false
     },
     {
